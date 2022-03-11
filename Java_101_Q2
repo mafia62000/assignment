@@ -1,0 +1,33 @@
+package Asessment;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Java_List_ {
+
+	public static void main(String[] args) {
+		
+		Scanner pri=new Scanner(System.in);
+		
+		int n=pri.nextInt();
+		ArrayList<Integer> arr=new ArrayList<>();
+		for(int i=0;i<n;i++)
+			arr.add(pri.nextInt());
+		
+		int t=pri.nextInt();
+		for(int i=0;i<t;i++) {
+			String s=pri.next();
+			if(s.equals("Insert")) 
+				arr.add(pri.nextInt(),pri.nextInt());
+				
+			if(s.equals("Delete")) 
+				arr.remove(pri.nextInt());
+		}
+		
+		for(int x:arr)
+			System.out.print(x+" ");
+		
+		
+	}
+
+}
